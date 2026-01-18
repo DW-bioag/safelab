@@ -509,3 +509,138 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* News Page Styles - ADD THESE TO YOUR styles.css */
+
+.news-year-section {
+    margin: 3rem 0;
+}
+
+.year-header {
+    font-size: 2.2rem;
+    color: #9d2235;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #9d2235;
+    margin-bottom: 2rem;
+}
+
+.news-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.news-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transform: translateX(5px);
+}
+
+.news-badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    align-self: flex-start;
+    min-width: 100px;
+    text-align: center;
+}
+
+.news-badge.journal {
+    background: #e3f2fd;
+    color: #1565c0;
+    border: 2px solid #1565c0;
+}
+
+.news-badge.presentation {
+    background: #f3e5f5;
+    color: #6a1b9a;
+    border: 2px solid #6a1b9a;
+}
+
+.news-badge.funding {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+}
+
+.news-badge.award {
+    background: #fff3e0;
+    color: #e65100;
+    border: 2px solid #e65100;
+}
+
+.news-badge.lab {
+    background: #fce4ec;
+    color: #c2185b;
+    border: 2px solid #c2185b;
+}
+
+.news-badge.outreach {
+    background: #e0f2f1;
+    color: #00695c;
+    border: 2px solid #00695c;
+}
+
+.news-badge.service {
+    background: #f1f8e9;
+    color: #558b2f;
+    border: 2px solid #558b2f;
+}
+
+.news-content {
+    flex: 1;
+}
+
+.news-date {
+    font-weight: 600;
+    color: #9d2235;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.news-content p {
+    line-height: 1.7;
+    color: #333;
+}
+
+.news-content a {
+    color: #1565c0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.news-content a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+.news-content em {
+    font-style: italic;
+    color: #555;
+}
+
+/* Responsive adjustments for news page */
+@media (max-width: 768px) {
+    .news-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .news-badge {
+        min-width: auto;
+        align-self: flex-start;
+    }
+
+    .year-header {
+        font-size: 1.8rem;
+    }
+}
