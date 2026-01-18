@@ -1,5 +1,3 @@
-css
-
 * {
     margin: 0;
     padding: 0;
@@ -114,7 +112,7 @@ nav li.has-submenu:hover .submenu {
     position: relative;
     height: 400px;
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url('images/hero.jpg') center/cover;
+                url('images/campus.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,6 +319,115 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* People Page - Grid Layout */
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.person-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.person-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.person-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #9d2235;
+}
+
+.person-card h3 {
+    margin: 0.5rem 0;
+    color: #9d2235;
+    font-size: 1.2rem;
+}
+
+.person-role {
+    font-weight: bold;
+    color: #666;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.person-detail {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0.3rem 0;
+    line-height: 1.4;
+}
+
+.person-links {
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+}
+
+.person-links a {
+    color: #9d2235;
+    text-decoration: none;
+}
+
+.person-links a:hover {
+    text-decoration: underline;
+}
+
+.person-contact {
+    margin-top: 0.8rem;
+}
+
+.person-contact a {
+    color: #9d2235;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.person-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Alumni Table */
+.alumni-table {
+    margin: 2rem 0;
+    overflow-x: auto;
+}
+
+.alumni-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.alumni-table th,
+.alumni-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.alumni-table th {
+    background: #9d2235;
+    color: white;
+    font-weight: 600;
+}
+
+.alumni-table tbody tr:hover {
+    background: #f5f5f5;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -373,6 +480,32 @@ footer a:hover {
     }
 
     .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* People page responsive */
+    .people-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .person-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .alumni-table {
+        font-size: 0.85rem;
+    }
+
+    .alumni-table th,
+    .alumni-table td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .people-grid {
         grid-template-columns: 1fr;
     }
 }
