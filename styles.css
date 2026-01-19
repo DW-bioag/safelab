@@ -428,90 +428,7 @@ footer a:hover {
     background: #f5f5f5;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #9d2235;
-        padding: 1rem;
-        gap: 0;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav li {
-        margin: 0.5rem 0;
-    }
-
-    .submenu {
-        position: static;
-        display: none;
-        padding-left: 1rem;
-        margin-top: 0.5rem;
-        background: transparent;
-        box-shadow: none;
-    }
-
-    nav li.has-submenu.open .submenu {
-        display: block;
-    }
-
-    .hero {
-        height: 300px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .image-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* People page responsive */
-    .people-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .person-card img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .alumni-table {
-        font-size: 0.85rem;
-    }
-
-    .alumni-table th,
-    .alumni-table td {
-        padding: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .people-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* News Page Styles - ADD THESE TO YOUR styles.css */
-
+/* News Page Styles */
 .news-year-section {
     margin: 3rem 0;
 }
@@ -634,25 +551,7 @@ footer a:hover {
     color: #555;
 }
 
-/* Responsive adjustments for news page */
-@media (max-width: 768px) {
-    .news-card {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .news-badge {
-        min-width: auto;
-        align-self: flex-start;
-    }
-
-    .year-header {
-        font-size: 1.8rem;
-    }
-}
-
-/* Publications Page Styles - ADD THESE TO YOUR styles.css */
-
+/* Publications Page Styles */
 .publication-header {
     background: linear-gradient(135deg, #9d2235 0%, #c93550 100%);
     color: white;
@@ -819,8 +718,324 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design for Publications */
+/* Research Page Styles */
+.research-vision {
+    background: linear-gradient(135deg, #9d2235 0%, #c93550 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(157, 34, 53, 0.2);
+}
+
+.research-vision h2 {
+    color: white;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.vision-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-top: 1rem;
+}
+
+/* Funding Section */
+.funding-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+}
+
+.funding-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.funding-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
+    align-items: center;
+    justify-items: center;
+    padding: 1rem;
+}
+
+.funding-logos img {
+    max-width: 180px;
+    max-height: 120px;
+    object-fit: contain;
+    filter: grayscale(20%);
+    transition: all 0.3s;
+}
+
+.funding-logos img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Projects Section */
+.projects-section {
+    margin: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #9d2235;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #9d2235;
+    margin-bottom: 2rem;
+}
+
+/* Project Cards */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-left: 6px solid #9d2235;
+}
+
+.project-card.completed {
+    border-left-color: #666;
+    opacity: 0.95;
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-number {
+    background: #9d2235;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.project-card.completed .project-number {
+    background: #666;
+}
+
+.project-header h3 {
+    flex: 1;
+    margin: 0;
+    color: #333;
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+.project-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.active-badge {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+}
+
+.completed-badge {
+    background: #f5f5f5;
+    color: #666;
+    border: 2px solid #999;
+}
+
+.project-funding {
+    color: #666;
+    font-style: italic;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 0.95rem;
+}
+
+.project-content {
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.project-text h4 {
+    color: #9d2235;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.project-text p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Project Keywords */
+.project-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.keyword {
+    background: #e3f2fd;
+    color: #1565c0;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #1565c0;
+}
+
+/* Project Media */
+.project-media {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.media-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-height: 300px;
+}
+
+.media-item img {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.media-item:hover img {
+    transform: scale(1.05);
+}
+
+.media-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+}
+
+.media-item.video {
+    background: #000;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #9d2235;
+        padding: 1rem;
+        gap: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    .submenu {
+        position: static;
+        display: none;
+        padding-left: 1rem;
+        margin-top: 0.5rem;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    nav li.has-submenu.open .submenu {
+        display: block;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* People page responsive */
+    .people-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .person-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .alumni-table {
+        font-size: 0.85rem;
+    }
+
+    .alumni-table th,
+    .alumni-table td {
+        padding: 0.5rem;
+    }
+
+    /* News page responsive */
+    .news-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .news-badge {
+        min-width: auto;
+        align-self: flex-start;
+    }
+
+    .year-header {
+        font-size: 1.8rem;
+    }
+
+    /* Publications page responsive */
     .pub-item {
         flex-direction: column;
         gap: 1rem;
@@ -845,5 +1060,79 @@ footer a:hover {
 
     .scholar-link {
         font-size: 1rem;
+    }
+
+    /* Research page responsive */
+    .research-vision {
+        padding: 2rem;
+    }
+
+    .research-vision h2 {
+        font-size: 1.7rem;
+    }
+
+    .vision-text {
+        font-size: 1rem;
+    }
+
+    .funding-logos {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .funding-logos img {
+        max-width: 120px;
+        max-height: 80px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-media {
+        grid-template-columns: 1fr;
+    }
+
+    .media-item {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .people-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .funding-logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .media-item {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .project-media {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
