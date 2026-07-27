@@ -946,6 +946,31 @@ footer a:hover {
     background: #000;
 }
 
+.media-item.has-code-link {
+    max-height: none;
+}
+
+.media-item.has-code-link img {
+    height: 260px;
+}
+
+.code-link {
+    display: block;
+    padding: 0.65rem 1rem;
+    background: #fff;
+    color: #9d2235;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-top: 1px solid #eee;
+}
+
+.code-link:hover,
+.code-link:focus {
+    background: #f8eef0;
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-toggle {
