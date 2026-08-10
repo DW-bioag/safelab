@@ -170,6 +170,43 @@ h3 {
     transform: scale(1.02);
 }
 
+.image-frame {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.image-frame:hover {
+    transform: scale(1.02);
+}
+
+.portrait-frame {
+    background: url('images/Sam-ASABE.jpeg') center/cover;
+}
+
+.portrait-frame::before {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    background: inherit;
+    filter: blur(12px);
+}
+
+.image-gallery .portrait-frame img {
+    position: relative;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.image-gallery .portrait-frame img:hover {
+    transform: none;
+}
+
 /* Contact Info */
 .contact-info {
     background: #f5f5f5;
