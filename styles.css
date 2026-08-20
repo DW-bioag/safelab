@@ -521,6 +521,12 @@ footer a:hover {
     border: 2px solid #6a1b9a;
 }
 
+.news-badge.invited-presentation {
+    background: #e0f2f1;
+    color: #00695c;
+    border: 2px solid #00695c;
+}
+
 .news-badge.proceeding {
     background: #f3e5f5;
     color: #6a1b9a;
