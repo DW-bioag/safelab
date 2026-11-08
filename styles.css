@@ -997,17 +997,6 @@ footer a:hover {
     height: 260px;
 }
 
-.media-item.has-code-link.wide-media {
-    grid-column: 1 / -1;
-}
-
-.media-item.has-code-link.wide-media img {
-    height: auto;
-    max-height: none;
-    object-fit: contain;
-    background: #fff;
-}
-
 .code-link {
     display: block;
     padding: 0.65rem 1rem;
